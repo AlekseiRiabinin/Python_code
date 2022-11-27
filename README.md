@@ -1,2 +1,2 @@
-# Python_code
-Python code
+# Counter
+Count symbols in words
