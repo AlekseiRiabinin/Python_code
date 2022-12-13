@@ -1,2 +1,2 @@
-# Counter
-Count symbols in words
+# Python code
+Various algorithms
