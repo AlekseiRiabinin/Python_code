@@ -49,7 +49,7 @@ def predicate_checker():
 # predicate_checker()
 
 
-# 3) Write a program that takes the coordinates of a point (X and Y) as an input, 
+# 3) Write a program that takes coordinates of a point (X and Y) as an input, 
 # with X ≠ 0 and Y ≠ 0, and outputs the quadrant of the plane 
 # in which this point is located (or on which axis it is located)
 print('Task 3\n')
@@ -86,4 +86,28 @@ def quadrant_checker():
     y=float(input('Enter Y-coordinate: '))
     quadrant(x, y)
 
-quadrant_checker()    
+# quadrant_checker()    
+
+
+# 4) Write a program that, given a quadrant, shows the range of 
+# possible coordinates of points in that quadrant (x and y)
+print('Task 4\n')
+def range_checker():
+    quad=int(input('Enter the quadrant (1, 2, 3, 4): '))
+    
+    if quad == 1:
+        print ('x > 0 and y > 0')
+ 
+    elif quad == 2:
+        print ('x < 0 and y > 0')
+         
+    elif quad == 3:
+        print ('x < 0 and y < 0')
+     
+    elif quad == 4:
+        print ('x > 0 and y < 0')
+
+    else:
+        print ('Try again')    
+ 
+range_checker()
