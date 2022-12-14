@@ -1,7 +1,7 @@
 
 # 1) Write a program that takes a number as an input representing the day of the week 
 # and checks whether that day is week
-print('Task 1')
+print('\nTask 1')
 print('------\n')
 def day_checker():
     weekday = int(input('Enter any weekday number (1-7): '))
@@ -13,7 +13,7 @@ def day_checker():
         print('Weekend\n')
 
     else:
-        print('Please enter any weekday number (1-7)\n')
+        print('Try again next time\n')
 
 day_checker()        
 
@@ -39,7 +39,7 @@ def predicate_checker():
     x=int(input('Enter the number (<=3): '))
     
     if x > 3 or x < 0:
-        print('Try again\n')
+        print('Try again next time\n')
     else:
         statement = input_numbers(x=x)
     
@@ -58,31 +58,31 @@ print('Task 3')
 print('------\n')
 def quadrant(x, y):
     if (x > 0 and y > 0):
-        print ('lies in First quadrant\n')
+        print('lies in First quadrant\n')
  
     elif (x < 0 and y > 0):
-        print ('lies in Second quadrant\n')
+        print('lies in Second quadrant\n')
          
     elif (x < 0 and y < 0):
-        print ('lies in Third quadrant\n')
+        print('lies in Third quadrant\n')
      
     elif (x > 0 and y < 0):
-        print ('lies in Fourth quadrant\n')
+        print('lies in Fourth quadrant\n')
          
     elif (x == 0 and y > 0):
-        print ('lies at positive Y axis\n')
+        print('lies at positive Y axis\n')
      
     elif (x == 0 and y < 0):
-        print ('lies at negative Y axis\n')
+        print('lies at negative Y axis\n')
      
     elif (y == 0 and x < 0):
-        print ('lies at negative X axis\n')
+        print('lies at negative X axis\n')
      
     elif (y == 0 and x > 0):
-        print ('lies at positive X axis\n')
+        print('lies at positive X axis\n')
      
     else:
-        print ('lies at origin\n')
+        print('lies at origin\n')
  
 def quadrant_checker():
     x=float(input('Enter X-coordinate: '))
@@ -100,19 +100,19 @@ def range_checker():
     quad=int(input('Enter the quadrant (1, 2, 3, 4): '))
     
     if quad == 1:
-        print ('x > 0 and y > 0\n')
+        print('x > 0 and y > 0\n')
  
     elif quad == 2:
-        print ('x < 0 and y > 0\n')
+        print('x < 0 and y > 0\n')
          
     elif quad == 3:
-        print ('x < 0 and y < 0\n')
+        print('x < 0 and y < 0\n')
      
     elif quad == 4:
-        print ('x > 0 and y < 0\n')
+        print('x > 0 and y < 0\n')
 
     else:
-        print ('Try again\n')    
+        print('Try again next time\n')    
  
 range_checker()
 
@@ -129,6 +129,6 @@ def euclidean_distance():
     y2=float(input('Enter Y2-coordinate: '))
 
     dist = math.sqrt(math.pow(x2 - x1, 2) + math.pow(y2 - y1, 2) * 1.0)
-    print(f'Euclidean_distance: {dist}') 
+    print(f'Euclidean distance: {dist}\n') 
 
 euclidean_distance()
