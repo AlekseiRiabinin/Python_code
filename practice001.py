@@ -14,7 +14,7 @@ def day_checker():
     else:
         print('Please enter any weekday number (1-7)\n')
 
-day_checker()        
+# day_checker()        
 
 
 # 2) Write a program for verification of the truth of the statement 
@@ -46,4 +46,44 @@ def predicate_checker():
         else:
             print('Statement is false')
 
-predicate_checker()
+# predicate_checker()
+
+
+# 3) Write a program that takes the coordinates of a point (X and Y) as an input, 
+# with X ≠ 0 and Y ≠ 0, and outputs the quadrant of the plane 
+# in which this point is located (or on which axis it is located)
+print('Task 3\n')
+def quadrant(x, y):
+    if (x > 0 and y > 0):
+        print ('lies in First quadrant')
+ 
+    elif (x < 0 and y > 0):
+        print ('lies in Second quadrant')
+         
+    elif (x < 0 and y < 0):
+        print ('lies in Third quadrant')
+     
+    elif (x > 0 and y < 0):
+        print ('lies in Fourth quadrant')
+         
+    elif (x == 0 and y > 0):
+        print ('lies at positive Y axis')
+     
+    elif (x == 0 and y < 0):
+        print ('lies at negative Y axis')
+     
+    elif (y == 0 and x < 0):
+        print ('lies at negative X axis')
+     
+    elif (y == 0 and x > 0):
+        print ('lies at positive X axis')
+     
+    else:
+        print ('lies at origin')
+ 
+def quadrant_checker():
+    x=float(input('Enter X-coordinate: '))
+    y=float(input('Enter Y-coordinate: '))
+    quadrant(x, y)
+
+quadrant_checker()    
