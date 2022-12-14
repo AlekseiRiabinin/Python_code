@@ -1,16 +1,49 @@
 
 # 1) Write a program that takes a number as an input representing the day of the week 
-# and checks whether that day is week.
+# and checks whether that day is week
+print('Task 1\n')
 def day_checker():
     weekday = int(input('Enter weekday number (1-7): '))
 
     if weekday in range(1, 6):
-        print('\nWeekday\n');
+        print('Weekday\n')
 
     elif weekday in range(6, 8):
-        print('\nWeekend\n')
+        print('Weekend\n')
 
     else:
-        print('\nPlease enter any weekday number (1-7)\n')
+        print('Please enter any weekday number (1-7)\n')
 
 day_checker()        
+
+
+# 2) Write a program for verification of the truth of the statement 
+# ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z for all values of the predicate
+print('Task 2\n')
+def input_numbers(x):
+    xyz = ['X', 'Y', 'Z']
+    arr = []
+    for i in range(x):
+        arr.append(input(f'Enter the value {xyz[i]}: '))
+    return arr
+
+def check_predicate(x):
+    left = not (x[0] or x[1] or x[2])
+    right = not x[0] and not x[1] and not x[2]
+    result = left == right
+    return result
+
+def predicate_checker():
+    x=int(input('Enter the number (<=3): '))
+    
+    if x > 3 or x < 0:
+        print('Try again')
+    else:
+        statement = input_numbers(x=x)
+    
+        if check_predicate(statement) == True:
+            print('Statement is true')
+        else:
+            print('Statement is false')
+
+predicate_checker()
