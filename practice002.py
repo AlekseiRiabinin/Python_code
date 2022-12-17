@@ -35,4 +35,29 @@ def sum_calculator():
         result += i
     print(f'Sum of digits in the number: {result}\n')    
 
-sum_calculator()    
+# sum_calculator()    
+
+
+# 3) The program shuffles a list of numbers
+print('\nTask 3')
+print('------\n')
+
+import random
+def list_shuffler():
+    n = int(input('Enter number of elements: '))
+    
+    arr = []
+    for i in range(n):
+        x = int(input(f'Element {i+1}: '))
+        arr.append(x)
+    
+    print(f'\nOriginal list: {arr}')
+    
+    for i in range(n-1, 0, -1):
+        j = random.randint(0, i+1)
+        arr[i], arr[j] = arr[j], arr[i]
+
+    print(f'Shuffled list: {arr}\n')  
+
+list_shuffler()      
+    
