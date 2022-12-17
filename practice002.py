@@ -10,7 +10,7 @@ def int_sum():
         result += int(n[i])
     print(f'Sum of digits in the number: {result}\n')
 
-# int_sum()    
+int_sum()    
 
 
 # 2) The program generates a list of integers based on the sequence 
@@ -35,7 +35,7 @@ def sum_calculator():
         result += i
     print(f'Sum of digits in the number: {result}\n')    
 
-# sum_calculator()    
+sum_calculator()    
 
 
 # 3) The program shuffles a list of numbers
@@ -52,12 +52,14 @@ def list_shuffler():
         arr.append(x)
     
     print(f'\nOriginal list: {arr}')
-    
-    for i in range(n-1, 0, -1):
-        j = random.randint(0, i+1)
-        arr[i], arr[j] = arr[j], arr[i]
+
+    last_idx = len(arr) - 1
+    while last_idx > 0:
+          rand_idx = random.randint(0, last_idx)
+          arr[last_idx], arr[rand_idx] = arr[rand_idx], arr[last_idx]
+          last_idx -= 1
 
     print(f'Shuffled list: {arr}\n')  
 
-list_shuffler()      
+list_shuffler()    
     
