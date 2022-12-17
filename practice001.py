@@ -1,5 +1,5 @@
 
-# 1) Write a program that takes a number as an input representing the day of the week 
+# 1) The program takes a number as an input representing the day of the week 
 # and checks whether that day is week
 print('\nTask 1')
 print('------\n')
@@ -18,7 +18,7 @@ def day_checker():
 day_checker()        
 
 
-# 2) Write a program for verification of the truth of the statement 
+# 2) The program is used for verification of the truth of the statement 
 # ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z for all values of the predicate
 print('Task 2')
 print('------\n')
@@ -51,7 +51,7 @@ def predicate_checker():
 predicate_checker()
 
 
-# 3) Write a program that takes coordinates of a point (X and Y) as an input, 
+# 3) The program takes coordinates of a point (X and Y) as an input, 
 # with X ≠ 0 and Y ≠ 0, and outputs the quadrant of the plane 
 # in which this point is located (or on which axis it is located)
 print('Task 3')
@@ -92,7 +92,7 @@ def quadrant_checker():
 quadrant_checker()    
 
 
-# 4) Write a program that, given a quadrant, shows the range of 
+# 4) Given a quadrant the program shows the range of 
 # possible coordinates of points in that quadrant (x and y)
 print('Task 4')
 print('------\n')
@@ -117,7 +117,7 @@ def range_checker():
 range_checker()
 
 
-# 5) Write a program that takes the coordinates of two points as an input
+# 5) The program takes the coordinates of two points as an input
 # and finds the distance between them in 2D space
 print('Task 5')
 print('------\n')
