@@ -21,7 +21,7 @@ def even_odd_sum():
     print (f'\nEven index positions sum: {even}' )
     print (f'Odd index positions sum: {odd}\n')
  
-# even_odd_sum()
+even_odd_sum()
 
 
 # 2) The program multiplies pairs of array elements:
@@ -67,7 +67,7 @@ def multiply_pairs():
     print (f'\nOriginal list having pairs: {dir_lst}')
     print (f'List of multiplied pairs: {mul_lst_print}\n')
 
-# multiply_pairs()
+multiply_pairs()
 
 
 # 3) The program extracts the fractional parts of float numbers
@@ -93,23 +93,27 @@ def fractional_difference():
     diff = round((lst_sorted[-1] - lst_sorted[0]), 2)
     print (f'\nDifference between max and min of fractional parts: {diff}\n')
 
-# fractional_difference()
+fractional_difference()
 
 
 # 4) The program converts decimal to binary number
 print('\nTask 4')
 print('------\n')
 
-def dec_to_bin():
-    decimal = int(input('Enter a number: '))
+def dec_to_bin(decimal=int(input('Enter a number: '))):
     if(decimal > 0):
         dec_to_bin(int(decimal / 2))
         print(decimal % 2, end='')
-        
-# dec_to_bin()
+
+def dec_to_bin_print():         
+    print('\nDecimal to binary:')   
+    result = dec_to_bin()
+    print('\n')      
+
+dec_to_bin_print()
 
 
-# 5) The program shuffles a list of numbers
+# 5) The program creates Fibonacci numbers, including for negative indices
 print('\nTask 5')
 print('------\n')
 def fibo(n):
