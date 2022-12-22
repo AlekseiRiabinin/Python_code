@@ -100,14 +100,40 @@ def fractional_difference():
 print('\nTask 4')
 print('------\n')
 
-def dec_to_bin(decimal=int(input('Enter a number: '))):
+def dec_to_bin():
+    decimal = int(input('Enter a number: '))
     if(decimal > 0):
         dec_to_bin(int(decimal / 2))
         print(decimal % 2, end='')
         
-dec_to_bin()
+# dec_to_bin()
 
 
-# # 5) The program shuffles a list of numbers
-# print('\nTask 5')
-# print('------\n')
+# 5) The program shuffles a list of numbers
+print('\nTask 5')
+print('------\n')
+def fibo(n):
+    if n >= 0:
+       idx = range(n + 1)
+       x = [0, 1]
+       for k in idx[2 :]:
+           x.append(x[k - 1] + x[k - 2]) 
+       
+       return x[n]
+    
+    else:
+       n =- (n - 1)
+       idx = range(n + 1)
+       x = [1, 0]
+       for k in idx[2 :]:
+           x.append(x[k - 2] - x[k - 1]) 
+       x.reverse()
+    
+    return x[0]
+
+def fibo_print():
+    n = int(input('Enter a number: '))
+    for i in range(-n, n + 1):
+        print(i, fibo(i))
+
+fibo_print()
