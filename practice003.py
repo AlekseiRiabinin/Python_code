@@ -1,11 +1,11 @@
-# 1) The program prints Sum of even and odd elements in an array
+# 1) The program prints sum of even and odd elements in an array
 print('\nTask 1')
 print('------\n')
 
 def even_odd_sum():
-    lst = []
     n = int(input('Enter number of elements: '))
- 
+    
+    lst = []
     for i in range(n):
         item = int(input(f'Element {i + 1}: '))
         lst.append(item)
@@ -24,7 +24,8 @@ def even_odd_sum():
 # even_odd_sum()
 
 
-# 2) The program multiplies pairs of first - last, second - anterior to last etc.
+# 2) The program multiplies pairs of array elements:
+# first - last, second - anterior to last etc.
 print('\nTask 2')
 print('------\n')
 
@@ -47,15 +48,15 @@ def remove_middle(lst):
     return lst
 
 def multiply_pairs():
-    dir_lst = []
     n = int(input('Enter number of elements: '))
- 
+    
+    dir_lst = []
     for i in range(n):
         item = int(input(f'Element {i + 1}: '))
         dir_lst.append(item)
 
     dir_lst = remove_middle(dir_lst)
-    rev_lst = reverse_list(dir_lst.copy(), 0, len(dir_lst)-1)
+    rev_lst = reverse_list(dir_lst.copy(), 0, len(dir_lst) - 1)
 
     mul_lst = []
     for j in range(0, len(dir_lst)):
@@ -63,17 +64,36 @@ def multiply_pairs():
 
     mul_lst_print = mul_lst[: len(mul_lst) // 2]
 
-    print (f'\nOriginal list: {dir_lst}')
-    print (f'Reversed list: {rev_lst}')  
+    print (f'\nOriginal list having pairs: {dir_lst}')
     print (f'List of multiplied pairs: {mul_lst_print}\n')
 
-multiply_pairs()
+# multiply_pairs()
 
 
-# # 3) The program shuffles a list of numbers
-# print('\nTask 3')
-# print('------\n')
+# 3) The program extracts the fractional parts of float numbers
+# and finds difference between their max and min (if value is not zero) 
+print('\nTask 3')
+print('------\n')
+def fractional_difference():
+    n = int(input('Enter number of elements: '))
+    
+    lst_float = []
+    for i in range(n):
+        item = float(input(f'Element {i + 1}: '))
+        lst_float.append(item)
+    
+    lst_frac = []
+    for j in range(n):
+        frac = lst_float[j] % 1
+        lst_frac.append(frac)
 
+    lst_filtered = [x for x in lst_frac if x != 0]
+    lst_sorted = sorted(lst_filtered) 
+
+    diff = round((lst_sorted[-1] - lst_sorted[0]), 2)
+    print (f'\nDifference between max and min of fractional parts: {diff}\n')
+
+fractional_difference()
 
 
 # # 4) The program shuffles a list of numbers
