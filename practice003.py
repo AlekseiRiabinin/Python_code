@@ -93,13 +93,19 @@ def fractional_difference():
     diff = round((lst_sorted[-1] - lst_sorted[0]), 2)
     print (f'\nDifference between max and min of fractional parts: {diff}\n')
 
-fractional_difference()
+# fractional_difference()
 
 
-# # 4) The program shuffles a list of numbers
-# print('\nTask 4')
-# print('------\n')
+# 4) The program converts decimal to binary number
+print('\nTask 4')
+print('------\n')
 
+def dec_to_bin(decimal=int(input('Enter a number: '))):
+    if(decimal > 0):
+        dec_to_bin(int(decimal / 2))
+        print(decimal % 2, end='')
+        
+dec_to_bin()
 
 
 # # 5) The program shuffles a list of numbers
