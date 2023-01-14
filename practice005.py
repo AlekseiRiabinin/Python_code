@@ -102,7 +102,7 @@ def printBoard(board):
     print('-+-+-')
     print(board['1'] + '|' + board['2'] + '|' + board['3'])
 
-# N main function which has all the gameplay functionality
+# main function which has all the gameplay functionality
 def tic_tac_toe_game():
 
     theBoard = {
@@ -204,4 +204,33 @@ def tic_tac_toe_game():
     else:
         print()       
 
-tic_tac_toe_game()
+# tic_tac_toe_game()
+
+
+# 3) Run-length encoding
+print('\nTask 3')
+print('------\n')
+
+def encode():
+    message = input('Enter a message: ')
+    encoded_message = ""
+    i = 0
+ 
+    while (i <= len(message) - 1):
+        count = 1
+        ch = message[i]
+        j = i
+        
+        while (j < len(message) - 1):
+            if (message[j] == message[j + 1]):
+                count += 1
+                j += 1
+            else:
+                break
+        
+        encoded_message = encoded_message + str(count) + ch
+        i = j + 1
+    
+    print(f'Encoded massage: {encoded_message}\n')
+    
+encode() 
