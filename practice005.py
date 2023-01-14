@@ -40,9 +40,9 @@ def game_with_human():
             show_status(player2, k, counter2, value)
 
     if flag:
-        print(f'{human} wins')
+        print(f'{player1} wins')
     else:
-        print(f'{robot} wins')
+        print(f'{player2} wins')
 
 def game_with_robot():
     human = input('Enter a name of the human: ')
@@ -87,8 +87,8 @@ def game_with_robot():
     else:
         print(f'{robot} wins')
 
-# game_with_human() 
-# game_with_robot()       
+game_with_human() 
+game_with_robot()       
 
 
 # 2) Tic-Tac-Toe Game
@@ -193,18 +193,8 @@ def tic_tac_toe_game():
             turn = 'O'
         else:
             turn = 'X'        
-    
-    # ask if player wants to restart the game or not.
-    restart = input("Do want to play again?(y/n)")
-    if restart == "y" or restart == "Y":  
-        for key in board_keys:
-            theBoard[key] = " "
 
-        tic_tac_toe_game()
-    else:
-        print()       
-
-# tic_tac_toe_game()
+tic_tac_toe_game()
 
 
 # 3) Run-length encoding
