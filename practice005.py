@@ -1,4 +1,4 @@
-# 1a) Candy grab game (human vs human)
+# 1) Candy grab game (human vs human and human vs robot)
 print('\nTask 1')
 print('------\n')
 from random import randint
@@ -12,8 +12,7 @@ def grab_candy(name):
 def show_status(name, k, counter, value):
     print(f'{name} turn, he takes {k}, he has {counter} in total. {value} candies are left on the table.')
 
-
-def candy_game():
+def game_with_human():
     player1 = input('Enter a name of 1st player: ')
     player2 = input('Enter a name of 2nd player: ')
     value = int(input('Enter a number of candies on the table: '))
@@ -41,8 +40,58 @@ def candy_game():
             show_status(player2, k, counter2, value)
 
     if flag:
-        print(f'{player1} wins')
+        print(f'{human} wins')
     else:
-        print(f'{player2} wins')
+        print(f'{robot} wins')
 
-candy_game()        
+def game_with_robot():
+    human = input('Enter a name of the human: ')
+    robot = input('Enter a name of the robot: ')
+    value = int(input('Enter a number of candies on the table: '))
+    flag = randint(0, 2)  # who is the first
+    if flag:
+        print(f'The first turn is for {human}')
+    else:
+        print(f'The first turn is for {robot}')
+
+    counter1 = 0
+    counter2 = 0
+
+    while value > 28:
+        if flag:
+            k = grab_candy(human)
+            counter1 += k
+            value -= k
+            flag = False
+            show_status(human, k, counter1, value)
+        else:
+            if value > 57:
+                k = randint(1, 29)
+                counter2 += k
+                value -= k
+                flag = True
+            elif 28 < value < 57:    
+                k = 1
+                counter2 += k
+                value -= k
+                flag = True  
+            elif value < 29:    
+                k = value
+                counter2 += k
+                value -= k
+                flag = True            
+            show_status(robot, k, counter2, value)
+
+    if flag:
+        print(f'{human} wins')
+    else:
+        print(f'{robot} wins')
+
+
+# game_with_human() 
+game_with_robot()       
+
+
+# 1b) Candy grab game (human vs bot)
+print('\nTask 1')
+print('------\n')
