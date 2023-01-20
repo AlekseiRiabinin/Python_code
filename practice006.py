@@ -21,13 +21,16 @@ def even_odd_sum():
     print (f'\nEven index positions sum: {even}')
     print (f'Odd index positions sum: {odd}\n')
 
-# even_odd_sum()
+even_odd_sum()
 
 
 # 2) The program extracts the fractional parts of float numbers
 # and finds difference between their max and min (if value is not zero) 
-print('\nTask 3')
+print('\nTask 2')
 print('------\n')
+
+def fraction(item):
+    return item % 1 
 
 def fractional_difference():
     n = int(input('Enter number of elements: '))
@@ -37,31 +40,10 @@ def fractional_difference():
         item = float(input(f'Element {i + 1}: '))
         lst_float.append(item)
   
-    lst_frac = []
-    for idx, item in enumerate(lst_float):
-        frac = lst_float[idx] % 1
-        lst_frac.append(frac)
-  
+    lst_frac = list(map(fraction, lst_float))
     lst_sorted = sorted([x for x in lst_frac if x != 0]) 
 
     diff = round((lst_sorted[-1] - lst_sorted[0]), 2)
     print (f'\nDifference between max and min of fractional parts: {diff}\n')
  
 fractional_difference()
-
-
-# 3) The program converts decimal to binary number
-print('\nTask 4')
-print('------\n')
-
-def dec_to_bin(decimal=int(input('Enter a number: '))):
-    if(decimal > 0):
-        dec_to_bin(int(decimal / 2))
-        print(decimal % 2, end='')
-
-def dec_to_bin_print():         
-    print('\nDecimal to binary:')   
-    result = dec_to_bin()
-    print('\n')      
-
-dec_to_bin_print()
