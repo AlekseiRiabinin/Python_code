@@ -29,9 +29,6 @@ even_odd_sum()
 print('\nTask 2')
 print('------\n')
 
-def fraction(item):
-    return item % 1 
-
 def fractional_difference():
     n = int(input('Enter number of elements: '))
     
@@ -40,7 +37,7 @@ def fractional_difference():
         item = float(input(f'Element {i + 1}: '))
         lst_float.append(item)
   
-    lst_frac = list(map(fraction, lst_float))
+    lst_frac = list(map(lambda x: x % 1, lst_float))
     lst_sorted = sorted([x for x in lst_frac if x != 0]) 
 
     diff = round((lst_sorted[-1] - lst_sorted[0]), 2)
